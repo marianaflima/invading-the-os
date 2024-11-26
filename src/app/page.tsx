@@ -1,12 +1,14 @@
 "use client";
-import "../global.module.css";
 import VideoPlayer from "@/components/videoplayer";
 import { inter } from "./ui/fonts";
 import NavBar from "./ui/header/navbar";
 import PhotoCard from "@/components/photocard";
 import styles from "./stylesheet";
+import enemies from "@/data";
+import PhotoGallery from "@/components/photogallery";
 
 const HomePage = () => {
+
   return (
     <div className="bg-black text-white h-screen w-screen">
       <NavBar />
@@ -56,7 +58,7 @@ const HomePage = () => {
         </main>
       </section>
       <section id="personagens" className="bg-black">
-        <main className="flex flex-col items-center justify-center gap-6 text-white px-12 py-5 md:px-20">
+        <main className="flex flex-col items-center justify-center gap-6 text-white px-12 py-10 md:px-20">
           <div className="flex flex-col items-center justify-center gap-4 text-center">
             <h1
               className={`${inter.className} mb-4 text-xl font-extrabold md:text-6xl pt-7`}
@@ -66,46 +68,31 @@ const HomePage = () => {
             <p
               className={`${inter.className} flex flex-wrap text-lg font-medium md:text-md text-wrap md:leading-normal pt-5 h-auto`}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Conheça um pouco dos nossos adversários
             </p>
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "space-between",
-              flex: "row",
-            }}
-          >
-            <PhotoCard
-              cards={[
-                {
-                  imageSrc: "/placeholder-1.jpg",
-                  title: "ORCA",
-                  description: "Sed varius commodo tellus sit amet placerat. Etiam dignissim mi odio, id maximus mauris dictum id."
-                },
-                {
-                  imageSrc: "/placeholder-2.jpg",
-                  title: "ORCA",
-                  description: "Sed varius commodo tellus sit amet placerat. Etiam dignissim mi odio, id maximus mauris dictum id."
-                },
-                {
-                  imageSrc: "/placeholder-3.jpg",
-                  title: "ORCA",
-                  description: "Sed varius commodo tellus sit amet placerat. Etiam dignissim mi odio, id maximus mauris dictum id."
-                },
-              ]}
-            />
+          <div className="flex flex-col items-center justify-center gap-4 text-center">
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "space-between",
+                flex: "row",
+              }}
+            >
+              <PhotoCard
+                cards={enemies}
+              />
+            </div>
           </div>
         </main>
       </section>
       <section
         id="cenario"
-        className="w-full flex flex-row bg-gray-50 text-black"
+        className="bg-gray-50 text-black"
       >
-        <main className="flex flex-col items-center justify-center gap-6 px-12 py-10 md:px-20">
-          <div className="flex flex-col items-center justify-center gap-4 text-center">
+       <main className="flex flex-col items-center justify-center gap-6 px-12 py-10 md:px-20">
+       <div className="flex flex-col items-center justify-center gap-4 text-center">
             <h1
               className={`${inter.className} mb-4 text-xl font-extrabold md:text-6xl pt-7`}
             >
@@ -114,13 +101,13 @@ const HomePage = () => {
             <p
               className={`${inter.className} text-lg font-medium md:text-md text-wrap md:leading-normal pt-5 h-auto`}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Onde se passa nossa aventura pelo sistema operacional.
             </p>
+            <PhotoGallery />
           </div>
         </main>
       </section>
-      <section id="gameplay" className="w-full flex flex-row text-white">
+      <section id="gameplay" className="text-white">
         <main className="flex flex-col items-center justify-center gap-6 px-12 py-10 md:px-20">
           <div className="flex flex-col items-center justify-center gap-4 text-center">
             <h1
@@ -131,8 +118,7 @@ const HomePage = () => {
             <p
               className={`${inter.className} text-lg font-medium md:text-md text-wrap md:leading-normal pt-5 h-auto`}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Uma breve volta pelo nosso jogo.
             </p>
             <VideoPlayer thumbnailSrc="/placeholder-3.jpg" />
           </div>

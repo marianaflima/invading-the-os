@@ -3,7 +3,7 @@ import React, { CSSProperties } from "react";
 const styles: { [key: string]: CSSProperties } = {
     photoCard: {
         position: 'relative',
-        height: 'calc(200% - 20px)',
+        height: 'calc(100% - 20px)',
         width: 'calc(30.33% - 20px)',
         margin: '10px',
         overflow: 'hidden',
