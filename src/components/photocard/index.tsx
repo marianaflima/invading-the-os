@@ -2,6 +2,7 @@ import React from "react";
 import styles from "@/app/stylesheet";
 import { useState } from "react";
 
+// Define the type for the card props
 interface PhotoCardProps {
   imageSrc: string;
   title: string;
@@ -45,7 +46,7 @@ const PhotoCardImage: React.FC<PhotoCardProps> = ({
   );
 };
 
-const PhotoCard: React.FC<PhotoCardContainerProps> = ({cards}) => {
+const PhotoCard: React.FC<PhotoCardContainerProps> = ({ cards }) => {
   return (
     <div style={styles.photoCardContainer}>
       {cards.map((card, index) => (

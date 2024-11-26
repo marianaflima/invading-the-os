@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-const images: string[] = [
-    '/placeholder-1.jpg',
-    '/placeholder-2.jpg',
-    '/placeholder-3.jpg',
-];
+interface PhotoGalleryProps {
+    images: string[];
+}
 
-const PhotoGallery: React.FC = () => {
+const PhotoGallery = ({images}: PhotoGalleryProps) => {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
     const [isPaused, setIsPaused] = useState<boolean>(false);
     let interval: NodeJS.Timeout | undefined;
@@ -35,7 +33,7 @@ const PhotoGallery: React.FC = () => {
     };
 
     return (
-        <div style={{ position: 'relative', width: '600px', height: '400px', overflow: 'hidden' }}>
+        <div style={{ position: 'relative', width: 'auto', height: 'auto', overflow: 'hidden' }}>
             <img 
                 src={images[currentIndex]} 
                 alt={`Image ${currentIndex + 1}`} 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 interface VideoPlayerProps {
   thumbnailSrc: string;
-  videoSrc?: string;
+  videoSrc: string;
 }
 
 export default function VideoPlayer({
@@ -21,9 +21,8 @@ export default function VideoPlayer({
       style={{ position: "relative", width: "640px" }}
     >
       {!isPlaying && (
-        <img
+        <video
           src={thumbnailSrc}
-          alt="Video Thumbnail"
           style={{ width: "100%", cursor: "pointer" }}
           onClick={handleThumbnailClick}
         />

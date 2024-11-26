@@ -8,7 +8,6 @@ import enemies from "@/data";
 import PhotoGallery from "@/components/photogallery";
 
 const HomePage = () => {
-
   return (
     <div className="bg-black text-white h-screen w-screen">
       <NavBar />
@@ -29,20 +28,9 @@ const HomePage = () => {
               <p
                 className={`${inter.className} text-xl text-black text-wrap font-semibold md:text-md md:leading-normal`}
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam,quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                "Invading the OS" é um jogo de aventura sobre a defesa em
+                sistemas operacionais, voltado ao ensino dos mecanismos usados e
+                como eles se comportam.
               </p>
             </div>
           </div>
@@ -80,19 +68,14 @@ const HomePage = () => {
                 flex: "row",
               }}
             >
-              <PhotoCard
-                cards={enemies}
-              />
+              <PhotoCard cards={enemies} />
             </div>
           </div>
         </main>
       </section>
-      <section
-        id="cenario"
-        className="bg-gray-50 text-black"
-      >
-       <main className="flex flex-col items-center justify-center gap-6 px-12 py-10 md:px-20">
-       <div className="flex flex-col items-center justify-center gap-4 text-center">
+      <section id="cenario" className="bg-gray-50 text-black">
+        <main className="flex flex-col items-center justify-center gap-6 px-12 py-10 md:px-20">
+          <div className="flex flex-col items-center justify-center gap-4 text-center">
             <h1
               className={`${inter.className} mb-4 text-xl font-extrabold md:text-6xl pt-7`}
             >
@@ -103,7 +86,7 @@ const HomePage = () => {
             >
               Onde se passa nossa aventura pelo sistema operacional.
             </p>
-            <PhotoGallery />
+            <PhotoGallery images={["/cenario.jpeg"]} />
           </div>
         </main>
       </section>
@@ -120,7 +103,7 @@ const HomePage = () => {
             >
               Uma breve volta pelo nosso jogo.
             </p>
-            <VideoPlayer thumbnailSrc="/placeholder-3.jpg" />
+            <VideoPlayer thumbnailSrc="/gameplay.mp4" videoSrc="/gameplay-video.mp4" />
           </div>
         </main>
       </section>
