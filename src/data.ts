@@ -14,7 +14,7 @@ const enemies = [
   {
     imageSrc: "/virus.jpeg",
     title: "Virus",
-    enemyType: "Obstacle",
+    enemyType: "Protagonist",
     description: "Aquele pequeno incômodo diário das vidas",
   },
 ];

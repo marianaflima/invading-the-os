@@ -35,7 +35,7 @@ const PhotoCardImage: React.FC<PhotoCardProps> = ({
       <div
         style={{
           ...styles.photoCardOverlay,
-          opacity: isHovered ? 1 : 0.25, // Show overlay on hover
+          opacity: isHovered ? 1 : 0, // Show overlay on hover
         }}
       >
         <h2 style={styles.photoCardTitle}>{title}: </h2>
