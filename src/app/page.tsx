@@ -34,10 +34,10 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-          <div className="md:w-1/2 flex justify-center pl-28  h-screen">
-            <div className="w-[543] h-[520] border-hairline border-gray-300 rounded-lg flex justify-center items-center overflow-hidden">
+          <div className="md:w-1/2 flex justify-center pl-28 h-screen">
+            <div className="w-auto h-auto border-hairline border-gray-300 rounded-lg flex justify-center items-center overflow-hidden">
               <img
-                src="/placeholder-1.jpg"
+                src="/logo.jpeg"
                 className="object-cover w-full h-full"
                 alt="Orca"
               />
